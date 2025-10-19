@@ -19,6 +19,8 @@ body{
   -moz-user-select: none;    
   -ms-user-select: none;    
   user-select: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 #thu{
   position: relative;
@@ -42,6 +44,8 @@ body{
   border: 2px solid #ff8fa3;
   border-radius: 5px;
   z-index: 3;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
 }
 #nap{
   position: absolute;
@@ -80,7 +84,7 @@ body{
     top: 0;
     line-height: 1.05;
     padding: 0 8px;
-    text-align: center;
+    text-align: left;
     word-break: break-word;
   }
 
@@ -115,6 +119,7 @@ p{
   line-height: 1.5;
   margin: 0;
   color: var(--muted);
+  text-align:;
   }
 #ket{
   position: relative;
