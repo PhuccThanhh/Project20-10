@@ -71,7 +71,7 @@ body{
   transition: transform 1s linear;
   border-radius: 10px;
   z-index: -1;
-  overflow-y:auto;
+  overflow-y:scroll;
   -webkit-overflow-scrolling:touch;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
