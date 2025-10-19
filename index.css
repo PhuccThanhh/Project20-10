@@ -125,6 +125,21 @@ p{
   top: -1%;
   font-size: 1rem;
 }
+#chu{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.f{
+  position: absolute;
+  font-size: clamp(1.6rem, 6.5vw, 2.6rem);
+  color: var(--accent);
+  opacity: 0;
+}
 
 #nut{
   position: absolute;       
@@ -250,6 +265,17 @@ p{
   }
 }
 
+@keyframes load {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .m{
   animation: a 1s linear forwards;
   will-change: animation;
@@ -283,5 +309,10 @@ p{
 .annut{
   z-index: -1;
   animation: c1 1s ease-in forwards;
+  will-change: animation;
+}
+
+.dau{
+  animation: load 0.6s ease-in forwards;
   will-change: animation;
 }
