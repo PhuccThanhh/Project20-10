@@ -2,6 +2,9 @@ const nut = document.getElementById('nut');
 const nap = document.getElementById('nap');
 const text = document.getElementById('text');
 const box = document.getElementById('box');
+const h2 = document.getElementById('h2');
+const h3 = document.getElementById('h3');
+const h4 = document.getElementById('h4');
 function createHearts(count = 10) {
   for (let i = 0; i < count; i++) {
     const heart = document.createElement("div");
@@ -65,6 +68,29 @@ function stopHearts() {
 }
 
 window.onload = () => {
+  h2.classList.add('dau');
+  h2.addEventListener('animationend',(e)=>{
+    if (e.animationName === "load") {
+      h2.classList.remove('dau');
+      h3.classList.add('dau');
+    }
+  });
+  h3.addEventListener('animationend',(e)=>{
+    if (e.animationName === "load") {
+      h3.classList.remove('dau');
+      h4.classList.add('dau');
+    }
+  });
+  h4.addEventListener('animationend',(e)=>{
+    if (e.animationName === "load") {
+      h4.classList.remove('dau');
+      setTimeout(() => {
+        h2.style.display = 'none';
+        h3.style.display = 'none';
+        h4.style.display = 'none';
+      }, 500);
+    }
+  });
   box.classList.add("hien");
   nap.classList.add('hien')
   nut.classList.add('hiennut');
